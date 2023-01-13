@@ -34,6 +34,8 @@ def main():
 
     @bot.event
     async def on_message(message):
+        if message.author == bot.user:
+            return
         frong_words = ["frong", "Frong"]
         arch_words = ["arch", "Arch", "archlinux"]
         for word in arch_words:
@@ -60,3 +62,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
